@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~*~ SUPA COOL BLOG ~*~</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-image"></div>
+            <h1 class="blog-title">EWII :3</h1>
+            
+            <div class="marquee-box">
+                <marquee scrollamount="5">Welcome to my supa cool webbed site!!!1!</marquee>
+            </div>
+            
+            <p class="blog-intro">haii guys! I love yapping so I wanna put my opinions and yappinations in one place thus making this blog. Please enjoy this blog as much as I enjoyed making it. !</p>
+            
+            <div class="webring-badges">
+                <div class="badge">Valid HTML</div>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <h2 class="section-header">/// LATEST LOGS ///</h2>
+            
+            <div id="entry-list">
+                </div>
+        </main>
+        
+    </div>
+
+    <script>
+        async function syncArchive() {
+            const container = document.getElementById('entry-list');
+            try {
+                const response = await fetch('/api/inventory');
+                const data = await response.json();
+                container.innerHTML = "";
+
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = "blog-post"; 
+                    
+                    card.innerHTML = `
+                        <div class="post-date">[ DATE: ${item.date} ]</div>
+                        <h2 class="post-title">${item.title}</h2>
+                        <p class="post-excerpt">${item.desc}</p>
+                        <a href="${item.file}" class="read-more">>> READ MORE</a>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (err) {
+                container.innerHTML = `<p style="color:red; font-weight:bold;">[ ! ] LINK_FAILURE: Cannot load logs.</p>`;
+            }
+        }
+        syncArchive();
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* style.css */
+body {
+    background-color: #d3d3d3; /* Light grey background */
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    color: #000000;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    margin: 0;
+    padding: 20px;
+    cursor: crosshair;
+}
+
+.main-container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 4px dashed #eebb22; /* Mustard yellow border */
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f5f5f5;
+    border-right: 4px dashed #eebb22;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-image {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #000000;
+    margin-bottom: 15px;
+    background: url('https://i.pinimg.com/736x/38/31/bc/3831bc5ec7f65705e47726a7d7056aa1.jpg') center/cover;
+    display: inline-block;
+}
+
+.blog-title {
+    font-size: 1.5rem;
+    color: #ff00ff;
+    text-shadow: 2px 2px 0px #000000;
+    margin: 0 0 10px 0;
+}
+
+.marquee-box {
+    background-color: #ffff00;
+    border: 2px solid #000000;
+    padding: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.blog-intro {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.webring-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.badge {
+    width: 88px;
+    height: 31px;
+    background-color: #cccccc;
+    border: 2px outset #ffffff;
+    font-size: 10px;
+    line-height: 27px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content-area {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.section-header {
+    background-color: #000080;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin-top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    border: 2px solid #000000;
+}
+
+#entry-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.blog-post {
+    background-color: #f9f9f9;
+    border: 2px dotted #eebb22;
+    padding: 15px;
+}
+
+.post-date {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #800080;
+    margin-bottom: 5px;
+}
+
+.post-title {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #c0c0c0;
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px outset #ffffff;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.read-more:active {
+    border: 2px inset #ffffff;
+}
