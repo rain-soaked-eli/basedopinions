@@ -137,4 +137,19 @@ body {
 
 .read-more:active {
     border: 2px inset #ffffff;
+
+}
+
+/* THE IMAGE TAMER */
+img {
+    max-width: 100%; /* Image will never be wider than its box */
+    height: auto;    /* Keeps the image from looking squished or stretched */
+    display: block;  /* Removes weird tiny gaps at the bottom of images */
+    margin: 10px auto; /* Centers the image with a little breathing room */
+}
+
+/* If you want that specific retro border look for all blog images */
+.post-image {
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0px #eebb22; /* Mustard yellow shadow */
 }
